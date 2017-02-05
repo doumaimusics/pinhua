@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<style>
+*{padding:0;margin:0;list-style:none;}
+
+.clearfix{
+	zoom: 1;
+}
+.clearfix:after{
+	content: '.';
+	height:0;
+	visibility:hidden;
+	display: block;
+	clear: both;
+	line-height: 0;
+}
+	.g-box{
+		width: 960px;
+		margin: 100px auto;
+		padding: 15px;
+		box-shadow: 0 0 10px #ccc;
+		background:#fff;
+	}
+	.g-box .m-titlebox{
+		height: 20px;
+		padding-bottom:10px;
+		border-bottom:3px #E7E7E7 solid;
+		
+	}
+	.g-box .m-titlebox .u-h2{
+		float: left;
+	    font-size: 20px;
+    font-family: "microsoft yahei";
+	}
+	.g-box .m-titlebox .u-ul{
+		float:right;
+		position: relative;
+		top:6px;		
+	}
+		.g-box .m-titlebox .u-ul li.on {
+			color: #ff6600;
+			font-weight: bold;
+		}
+	.g-box .m-titlebox .u-ul li{
+	width: 146px;
+	line-height: 20px;
+	display: inline;
+	float: left;
+	text-align: center;
+	cursor:pointer;
+	}
+	.g-box .m-titlebox .u-ul p{
+	
+		position: absolute;
+    top: 24px;
+    left: 0px;
+    width: 146px;
+    height: 7px;
+    border-top: 3px solid #ff6600;
+    overflow: hidden;
+    text-align: center;
+	}
+	.g-box .m-titlebox .u-ul p b{
+   width: 0px;height: 0;
+   margin-top: -3px;
+   border-style:solid dashed dashed dashed;
+   border-width:9px;
+   border-color:#ff6600 #fff #fff #fff;
+   overflow: hidden;
+   zoom: 1;
+   font-size: 0;
+   display: inline-block;
+	}
+		
+</style>
+	<body>
+		<div class="g-box">
+			<!--产品标题-->
+			<div class="m-titlebox clearfix">
+				<h2 class="u-h2">设计案例</h2>
+				<ul class="u-ul">
+					<li class="on">LOGO</li>
+					<li>宣传单</li>
+					<li>画册</li>
+					<li>优惠券</li>
+					<li>会员卡</li>
+					<p><b></b></p>
+				</ul>
+			</div>
+			<!--产品内容-->
+			<div class="m-product-wrap"></div>
+		</div>
+	</body>
+</html>
+<script src="jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.u-ul li').click(function(){
+			//把.u-ul下li转换成this。this的意思就是点击到谁就指向谁
+			var $LiIndex = $('.u-ul li').index(this);
+			//.u-ul下的li添加上on这个类  当有了on 这个类的时候改变样式
+			$(this).addClass('on').siblings().removeClass('on');
+			//获取到.u-ul下li的宽度
+			var $LiWidth = $('.u-ul li').width();
+			//用animate动画，点击li的时候实现平滑滑动效果
+			$('.u-ul p').stop(false,true).animate({'left':$LiIndex*$LiWidth+'px'},300);
+		})
+	})
+</script>

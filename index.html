@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		body {
+			font-size: 12px;
+		}
+		
+		img {
+			border: none;
+		}
+		/*public*/
+		
+		.fl {
+			display: inline;
+			float: left
+		}
+		
+		.fr {
+			display: inline;
+			float: right
+		}
+		
+		.cf:after {
+			content: "";
+			clear: both;
+			display: block;
+			height: 0;
+			overflow: hidden
+		}
+		
+		.cf {
+			zoom: 1
+		}
+		
+		.pb10 {
+			padding-bottom: 10px
+		}
+		
+		.mt10 {
+			margin-top: 10px
+		}
+		/*main*/
+		
+		.lanrenzhijia {
+			width: 960px;
+			margin: 100px auto;
+			background: #fff;
+			padding: 15px;
+			box-shadow: 0 0 10px #ccc;
+		}
+		
+		.lanrenzhijia .title {
+			height: 20px;
+			border-bottom: 3px solid #e7e7e7;
+			padding-bottom: 10px;
+		}
+		
+		.lanrenzhijia .title h2 {
+			font-size: 20px;
+			font-family: "microsoft yahei";
+		}
+		
+		.lanrenzhijia .title-list {
+			position: relative;
+			top: 6px;
+		}
+		
+		.lanrenzhijia .title-list li {
+			width: 146px;
+			line-height: 20px;
+			text-align: center;
+			float: left;
+			display: inline;
+		}
+		
+		.lanrenzhijia .title-list li.on {
+			color: #ff6600;
+			font-weight: bold;
+		}
+		
+		.lanrenzhijia .title-list p {
+			position: absolute;
+			top: 24px;
+			left: 0px;
+			width: 146px;
+			height: 7px;
+			border-top: 3px solid #ff6600;
+			overflow: hidden;
+			text-align: center;
+		}
+		
+		.lanrenzhijia .title-list b {
+			display: inline-block;
+			width: 0;
+			height: 0;
+			margin-top: -3px;
+			border-style: solid dashed dashed dashed;
+			border-width: 9px;
+			border-color: #ff6600 #fff #fff #fff;
+			overflow: hidden;
+			zoom: 1;
+			font-size: 0;
+		}
+		
+		.product {
+			height: 268px;
+			position: relative;
+			overflow: hidden;
+			display: none;
+			margin-top: 20px;
+		}
+		
+		.product ul {
+			position: absolute;
+			left: 0px;
+		}
+		
+		.product-wrap .show {
+			display: block;
+		}
+		
+		.product-wrap .product li {
+			float: left;
+			display: inline;
+			margin-left: 13px;
+			background: #f3f3f3;
+			border: 2px solid #fafafa;
+			transition: 0.4s;
+			-webkit-transition: 0.4s;
+			-moz-transition: 0.4s;
+			-o-transition: 0.4s;
+			-ms-transition: 0.4s;
+		}
+		
+		.product-wrap .product li.ml0 {
+			margin-left: 0px;
+		}
+		
+		.product-wrap .product li a.imgwrap {
+			display: block;
+			width: 226px;
+			height: 200px;
+			background: #fff;
+			text-align: center;
+		}
+		
+		.product-wrap .product li p {
+			padding-left: 15px;
+			color: #666666;
+			line-height: 22px;
+		}
+		
+		.product-wrap .product li p a {
+			color: #666666;
+			text-decoration: none;
+		}
+		
+		.product-wrap .product li p a:hover {
+			color: #ff6600;
+			text-decoration: none;
+		}
+	</style>
+
+	<body>
+		<div class="lanrenzhijia">
+			<div class="title cf">
+				<h2 class="fl">设计案例</h2>
+				<ul class="title-list fr cf ">
+					<li class="on">LOGO</li>
+					<li>宣传单</li>
+					<li>画册</li>
+					<li>优惠券</li>
+					<li>会员卡</li>
+					<p><b></b></p>
+				</ul>
+			</div>
+
+			<div class="product-wrap">
+				<!--案例1-->
+				<div class="product show">
+					<ul class="cf">
+						<li class="ml0">
+							<a href="#" class="imgwrap"> <img src="images/1.jpg"> </a>
+							<p class="mt10">
+								<a href="#">jQuery插件库... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/1.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/1.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/1.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+					</ul>
+				</div>
+				<!--案例2-->
+				<div class="product">
+					<ul class="cf">
+						<li class="ml0">
+							<a href="#" class="imgwrap"> <img src="images/2.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/2.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/2.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/2.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+					</ul>
+				</div>
+				<!--案例3-->
+				<div class="product">
+					<ul class="cf">
+						<li class="ml0">
+							<a href="#" class="imgwrap"> <img src="images/3.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/3.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/3.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/3.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+					</ul>
+				</div>
+				<!--案例4-->
+				<div class="product">
+					<ul class="cf">
+						<li class="ml0">
+							<a href="#" class="imgwrap"> <img src="images/4.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/4.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/4.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/4.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+					</ul>
+				</div>
+				<!--案例5-->
+				<div class="product">
+					<ul class="cf">
+						<li class="ml0">
+							<a href="#" class="imgwrap"> <img src="images/5.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/5.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/5.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+						<li>
+							<a href="#" class="imgwrap"> <img src="images/5.jpg"> </a>
+							<p class="mt10">
+								<a href="#"> jQuery插件库演示... </a>
+							</p>
+							<p class="pb10">演示描述信息</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>
+<script src="jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//设计案例切换
+		$('.title-list li').click(function() {
+			var liindex = $('.title-list li').index(this);
+			$(this).addClass('on').siblings().removeClass('on');
+			$('.product-wrap div.product').eq(liindex).fadeIn(150).siblings('div.product').hide();
+			var liWidth = $('.title-list li').width();
+			$('.lanrenzhijia .title-list p').stop(false, true).animate({
+				'left': liindex * liWidth + 'px'
+			}, 300);
+		});
+
+		//设计案例hover效果
+		$('.product-wrap .product li').hover(function() {
+			$(this).css("border-color", "#ff6600");
+			$(this).find('p > a').css('color', '#ff6600');
+		}, function() {
+			$(this).css("border-color", "#fafafa");
+			$(this).find('p > a').css('color', '#666666');
+		});
+	});
+</script>
